@@ -1,0 +1,139 @@
+
+Based on the following plan:
+
+{
+  "exerciseTheme": "User Management System",
+  "classes": [
+    {
+      "name": "User",
+      "type": "class",
+      "file": "User.java",
+      "package": "de.tum.test",
+      "methods": [
+        "public User(String name, String email)",
+        "public String getName()",
+        "public String getEmail()",
+        "public boolean equals(Object obj)",
+        "public int hashCode()"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserManager",
+      "type": "class",
+      "file": "UserManager.java",
+      "package": "de.tum.test",
+      "methods": [
+        "public User createUser(String name, String email)",
+        "public User findUserByEmail(String email)",
+        "public void deleteUser(String email)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserController",
+      "type": "class",
+      "file": "UserController.java",
+      "package": "de.tum.test",
+      "methods": [
+        "public void registerUser(String name, String email)",
+        "public void removeUser(String email)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserDatabase",
+      "type": "class",
+      "file": "UserDatabase.java",
+      "package": "de.tum.test",
+      "methods": [
+        "public void addUser(User user)",
+        "public User getUser(String email)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    }
+  ],
+  "designPatterns": [],
+  "studentTodos": 4,
+  "estimatedSolutionLOC": 85,
+  "testClasses": [
+    {
+      "name": "UserTest",
+      "file": "UserTest.java",
+      "testMethods": [
+        "public void testUserCreation()",
+        "public void testUserEquality()",
+        "public void testUserHashCode()"
+      ]
+    },
+    {
+      "name": "UserManagerTest",
+      "file": "UserManagerTest.java",
+      "testMethods": [
+        "public void testCreateUser()",
+        "public void testFindUserByEmail()",
+        "public void testDeleteUser()"
+      ]
+    },
+    {
+      "name": "UserControllerTest",
+      "file": "UserControllerTest.java",
+      "testMethods": [
+        "public void testRegisterUser()",
+        "public void testRemoveUser()"
+      ]
+    },
+    {
+      "name": "UserDatabaseTest",
+      "file": "UserDatabaseTest.java",
+      "testMethods": [
+        "public void testAddUser()",
+        "public void testGetUser()"
+      ]
+    }
+  ],
+  "coveredCompetencies": [
+    "Object References",
+    "Null References",
+    "Object Equality"
+  ],
+  "coveredPrerequisites": [
+    "Object Creation"
+  ]
+}
+
+And description:
+
+
+The exercise should focus on the following competencies:
+
+Object References:
+Explain how variables hold references to objects rather than objects themselves, and how multiple references can point to the same object. Understand the implications for parameter passing, assignment, and object sharing.
+
+Null References:
+Explain the meaning of null as a reference that points to no object, and understand how NullPointerException occurs. Recognize situations where null values may arise and the importance of null checking in defensive programming.
+
+Object Equality:
+Understand how object equality is evaluated in Java, including the difference between reference equality (==) and logical equality using equals(). Recognize common pitfalls when comparing objects and implement meaningful equality checks where appropriate.
+
+The following prerequisite knowledge is required:
+
+Object Creation:
+Instantiate objects using constructors with the 'new' keyword, providing appropriate arguments to initialize object state. Apply object creation to build programs that utilize multiple interacting objects.
+
+
+
+Generate:
+- problem-statement.md
+- Java template code
+
+The generated files MUST strictly follow the plan and reflect all listed competencies and prerequisites.
+Return files JSON.

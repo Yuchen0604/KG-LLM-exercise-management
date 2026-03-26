@@ -1,0 +1,95 @@
+@prefix : <https://aet.cit.tum.de/tpo/example#> .
+@prefix tpo: <https://aet.cit.tum.de/tpo#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+##########
+# CLASSES
+##########
+
+tpo:Theme a owl:Class .
+tpo:Feature a owl:Class .
+
+##########
+# PROPERTIES
+##########
+
+:providesFeature a owl:ObjectProperty ;
+    rdfs:domain tpo:Theme ;
+    rdfs:range tpo:Feature .
+
+:requiresFeature a owl:ObjectProperty ;
+    rdfs:domain tpo:Competency ;
+    rdfs:range tpo:Feature .
+
+##########
+# FEATURES
+##########
+
+:HierarchyFeature a tpo:Feature .
+:ReferenceFeature a tpo:Feature .
+:NullabilityFeature a tpo:Feature .
+:IdentityFeature a tpo:Feature .
+:SelfReferenceFeature a tpo:Feature .
+:CollectionFeature a tpo:Feature .
+:StateTransitionFeature a tpo:Feature .
+:EncapsulationFeature a tpo:Feature .
+:MethodDispatchFeature a tpo:Feature .
+:ControlFlowFeature a tpo:Feature .
+
+##########
+# THEMES
+##########
+
+:AnimalSystem a tpo:Theme ;
+    :providesFeature :HierarchyFeature , :ReferenceFeature .
+
+:LibrarySystem a tpo:Theme ;
+    :providesFeature :CollectionFeature , :ReferenceFeature .
+
+:BankingSystem a tpo:Theme ;
+    :providesFeature :StateTransitionFeature , :EncapsulationFeature .
+
+:SocialNetwork a tpo:Theme ;
+    :providesFeature :ReferenceFeature , :CollectionFeature .
+
+:ECommercePlatform a tpo:Theme ;
+    :providesFeature :CollectionFeature , :StateTransitionFeature .
+
+:GameCharacterSystem a tpo:Theme ;
+    :providesFeature :HierarchyFeature , :MethodDispatchFeature .
+
+:VehicleManagement a tpo:Theme ;
+    :providesFeature :HierarchyFeature , :EncapsulationFeature .
+
+:FileSystem a tpo:Theme ;
+    :providesFeature :HierarchyFeature , :CollectionFeature .
+
+:ChatApplication a tpo:Theme ;
+    :providesFeature :ReferenceFeature , :StateTransitionFeature .
+
+:CourseManagement a tpo:Theme ;
+    :providesFeature :CollectionFeature , :ReferenceFeature .
+
+:HospitalSystem a tpo:Theme ;
+    :providesFeature :StateTransitionFeature , :EncapsulationFeature .
+
+:ParkingSystem a tpo:Theme ;
+    :providesFeature :StateTransitionFeature , :ControlFlowFeature .
+
+##########
+# COMPETENCY FEATURE MAPPING (EXAMPLES)
+##########
+
+# NOTE: adjust these based on your actual competency IRIs
+
+:Comp_Inheritance :requiresFeature :HierarchyFeature .
+:Comp_DynamicBinding :requiresFeature :MethodDispatchFeature .
+:Comp_ObjectReferences :requiresFeature :ReferenceFeature .
+:Comp_NullReferences :requiresFeature :NullabilityFeature .
+:Comp_ObjectEquality :requiresFeature :IdentityFeature .
+:Comp_Recursion :requiresFeature :SelfReferenceFeature .
+:Comp_Collections :requiresFeature :CollectionFeature .
+:Comp_Encapsulation :requiresFeature :EncapsulationFeature .
+:Comp_ControlFlow :requiresFeature :ControlFlowFeature .

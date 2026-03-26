@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "problem-statement.md",
+      "content": "# File Processing System\n\n## Objective\nDevelop a system that handles file processing with appropriate error management. The focus will be on managing input and output operations while handling exceptions that may arise during these operations.\n\n## Requirements\n1. You will implement the `FileProcessor` class which will handle the file processing logic. It should be able to process a file and manage exceptions properly.\n2. You will create custom exceptions `FileNotFoundException` and `InvalidFileFormatException` to represent specific error conditions when file issues occur.\n3. Implement a `FileReader` class that reads the content of a file and a `FileWriter` class that writes content to a file.\n4. You will create unit tests for the file processing classes ensuring proper functionality and exception handling.\n\n## Expected Outcome\nBy the end of this exercise, you should be able to demonstrate an understanding of Java's exception handling mechanism, including try-catch blocks, creating custom exceptions, and implementing basic file operations. You will also apply inheritance principles in your class design.\n\n## Class Details\n- **FileProcessor**: Responsible for processing files. Implement the method `processFile(String filePath)` to include file processing logic with exception handling, and `handleException(Exception e)` to handle different exception types appropriately.\n- **FileNotFoundException**: Extend the `Exception` class to provide a specific exception for file not found scenarios. Implement the `getMessage()` method to return an appropriate message.\n- **InvalidFileFormatException**: Create another custom exception that indicates file format issues. Implement the `getMessage()` method as well.\n- **FileReader**: Responsible for reading files. Implement the `readFile(String filePath)` method that attempts to read a file and throws appropriate exceptions if it fails.\n- **FileWriter**: Responsible for writing files. Implement `writeFile(String filePath, String content)` to write the given content to a specified file path.\n- **Application**: Main entry point for the application. Implement the `main(String[] args)` method to start the file processing operation based on user input.\n\n## Testing\nYou will create test classes such as `FileProcessorTest`, `FileReaderTest`, and `FileWriterTest` to validate the functionality of your file processing system including exception scenarios."
+    },
+    {
+      "path": "de/tum/test/FileProcessor.java",
+      "content": "package de.tum.test;\n\npublic class FileProcessor {\n\n    public void processFile(String filePath) {\n        // TODO: Implement logic to process the file located at filePath and handle any exceptions that may arise.\n    }\n\n    public void handleException(Exception e) {\n        // TODO: Implement logic to handle exceptions appropriately based on the type of exception.\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/FileNotFoundException.java",
+      "content": "package de.tum.test;\n\npublic class FileNotFoundException extends Exception {\n\n    @Override\n    public String getMessage() {\n        // TODO: Return an appropriate message indicating that the file was not found.\n        return \"File not found.\";\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/FileReader.java",
+      "content": "package de.tum.test;\n\npublic class FileReader {\n\n    public void readFile(String filePath) {\n        // TODO: Implement the logic to read the file from the specified filePath and throw exceptions if any issues occur.\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/FileWriter.java",
+      "content": "package de.tum.test;\n\npublic class FileWriter {\n\n    public void writeFile(String filePath, String content) {\n        // TODO: Implement the logic to write the provided content to the specified filePath and handle any exceptions that may arise.\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/InvalidFileFormatException.java",
+      "content": "package de.tum.test;\n\npublic class InvalidFileFormatException extends Exception {\n\n    @Override\n    public String getMessage() {\n        // TODO: Return an appropriate message indicating that the file format is invalid.\n        return \"Invalid file format.\";\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/Application.java",
+      "content": "package de.tum.test;\n\npublic class Application {\n\n    public static void main(String[] args) {\n        // TODO: Implement the main method to handle user input and invoke file processing using FileProcessor.\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/FileProcessorTest.java",
+      "content": "package de.tum.test;\n\nimport org.junit.Test;\nimport static org.junit.Assert.*;\n\npublic class FileProcessorTest {\n\n    @Test\n    public void testProcessFileWithValidPath() {\n        // TODO: Write a test case to verify file processing with a valid file path.\n    }\n\n    @Test\n    public void testProcessFileWithInvalidPath() {\n        // TODO: Write a test case to verify exception handling when processing an invalid file path.\n    }\n\n    @Test\n    public void testHandleException() {\n        // TODO: Write a test case to verify that exceptions are handled appropriately.\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/FileReaderTest.java",
+      "content": "package de.tum.test;\n\nimport org.junit.Test;\nimport static org.junit.Assert.*;\n\npublic class FileReaderTest {\n\n    @Test\n    public void testReadFileSuccessfully() {\n        // TODO: Write a test case to verify successful file reading.\n    }\n\n    @Test\n    public void testReadFileThrowsException() {\n        // TODO: Write a test case to check exception throwing when reading a non-existent file.\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/FileWriterTest.java",
+      "content": "package de.tum.test;\n\nimport org.junit.Test;\nimport static org.junit.Assert.*;\n\npublic class FileWriterTest {\n\n    @Test\n    public void testWriteFileSuccessfully() {\n        // TODO: Write a test case to verify successful file writing.\n    }\n\n    @Test\n    public void testWriteFileThrowsException() {\n        // TODO: Write a test case to check exception throwing during file writing.\n    }\n}\n"
+    }
+  ]
+}

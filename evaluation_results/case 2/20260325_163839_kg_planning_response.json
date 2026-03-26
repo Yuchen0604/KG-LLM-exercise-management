@@ -1,0 +1,106 @@
+{
+  "exerciseTheme": "Build a User Management System using object-oriented principles that handles user data and supports null checking.",
+  "classes": [
+    {
+      "name": "User",
+      "type": "class",
+      "file": "User.java",
+      "package": "de.tum.test",
+      "methods": [
+        "String getUsername()",
+        "void setUsername(String username)",
+        "String getEmail()",
+        "void setEmail(String email)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserService",
+      "type": "class",
+      "file": "UserService.java",
+      "package": "de.tum.test",
+      "methods": [
+        "User createUser(String username, String email)",
+        "User findUserByUsername(String username)",
+        "void updateEmail(String username, String newEmail)",
+        "void deleteUser(String username)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserManagementSystem",
+      "type": "class",
+      "file": "UserManagementSystem.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void start()"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserNotFoundException",
+      "type": "class",
+      "file": "UserNotFoundException.java",
+      "package": "de.tum.test",
+      "methods": [
+        "UserNotFoundException(String message)"
+      ],
+      "implements": [],
+      "extends": "Exception",
+      "providedToStudent": true
+    },
+    {
+      "name": "UserValidation",
+      "type": "class",
+      "file": "UserValidation.java",
+      "package": "de.tum.test",
+      "methods": [
+        "boolean isValidUsername(String username)",
+        "boolean isValidEmail(String email)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    }
+  ],
+  "designPatterns": [],
+  "studentTodos": 5,
+  "estimatedSolutionLOC": 75,
+  "testClasses": [
+    {
+      "name": "UserServiceTest",
+      "file": "UserServiceTest.java",
+      "testMethods": [
+        "testCreateUser",
+        "testFindUserByUsername",
+        "testUpdateEmail",
+        "testDeleteUser",
+        "testUserNotFound"
+      ]
+    },
+    {
+      "name": "UserValidationTest",
+      "file": "UserValidationTest.java",
+      "testMethods": [
+        "testIsValidUsername",
+        "testIsValidEmail"
+      ]
+    }
+  ],
+  "coveredCompetencies": [
+    "Null References",
+    "Object References",
+    "Object Equality"
+  ],
+  "coveredPrerequisites": [
+    "Object References",
+    "Object Creation",
+    "Objects and Classes"
+  ]
+}

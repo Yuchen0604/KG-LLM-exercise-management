@@ -1,0 +1,108 @@
+{
+  "exerciseTheme": "User Management System",
+  "classes": [
+    {
+      "name": "User",
+      "type": "class",
+      "file": "User.java",
+      "package": "de.tum.test",
+      "methods": [
+        "public User(String name, String email)",
+        "public String getName()",
+        "public String getEmail()",
+        "public boolean equals(Object obj)",
+        "public int hashCode()"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserManager",
+      "type": "class",
+      "file": "UserManager.java",
+      "package": "de.tum.test",
+      "methods": [
+        "public User createUser(String name, String email)",
+        "public User findUserByEmail(String email)",
+        "public void deleteUser(String email)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserController",
+      "type": "class",
+      "file": "UserController.java",
+      "package": "de.tum.test",
+      "methods": [
+        "public void registerUser(String name, String email)",
+        "public void removeUser(String email)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserDatabase",
+      "type": "class",
+      "file": "UserDatabase.java",
+      "package": "de.tum.test",
+      "methods": [
+        "public void addUser(User user)",
+        "public User getUser(String email)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    }
+  ],
+  "designPatterns": [],
+  "studentTodos": 4,
+  "estimatedSolutionLOC": 85,
+  "testClasses": [
+    {
+      "name": "UserTest",
+      "file": "UserTest.java",
+      "testMethods": [
+        "public void testUserCreation()",
+        "public void testUserEquality()",
+        "public void testUserHashCode()"
+      ]
+    },
+    {
+      "name": "UserManagerTest",
+      "file": "UserManagerTest.java",
+      "testMethods": [
+        "public void testCreateUser()",
+        "public void testFindUserByEmail()",
+        "public void testDeleteUser()"
+      ]
+    },
+    {
+      "name": "UserControllerTest",
+      "file": "UserControllerTest.java",
+      "testMethods": [
+        "public void testRegisterUser()",
+        "public void testRemoveUser()"
+      ]
+    },
+    {
+      "name": "UserDatabaseTest",
+      "file": "UserDatabaseTest.java",
+      "testMethods": [
+        "public void testAddUser()",
+        "public void testGetUser()"
+      ]
+    }
+  ],
+  "coveredCompetencies": [
+    "Object References",
+    "Null References",
+    "Object Equality"
+  ],
+  "coveredPrerequisites": [
+    "Object Creation"
+  ]
+}

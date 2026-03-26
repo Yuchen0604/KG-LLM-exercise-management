@@ -1,0 +1,32 @@
+{
+  "files": [
+    {
+      "path": "problem-statement.md",
+      "content": "# Zoo Animal Behavior System\n\n## Problem Statement\n\nIn this exercise, you will create a simple Zoo Animal Behavior System. The system will consist of different types of animals and will allow you to simulate their behaviors such as making sounds and eating. You will need to implement the functionality in a way that demonstrates:\n\n### Competencies covered:\n1. **Dynamic Binding**: Understand how method calls are resolved at runtime based on the actual object type - this involves using polymorphism in your implementation.\n2. **Inheritance**: Apply the 'extends' keyword to create class hierarchies, allowing for code reuse and enhanced functionality.\n\n### Prerequisites:\n- **Method Overriding**: You should be familiar with how subclasses can provide specific implementations for methods defined in their superclass.\n- **Polymorphism**: You need to understand how to treat different object types uniformly through their common superclass.\n- **Class Definition**: You should be able to design and implement classes with methods and fields appropriately.\n\n## Classes Overview\n- Create an abstract `Animal` class that defines the methods `makeSound()` and `eat()`.\n- Implement two concrete classes, `Lion` and `Elephant`, that inherit from `Animal`. Each should provide its own implementation of the `makeSound()` method.\n- Create a `Zoo` class that manages a collection of animals. It should have a method `addAnimal(Animal animal)` to add animals to its collection and a method `makeAllSounds()` to trigger the `makeSound()` method for all animals in the zoo.\n\nYou need to implement the `Zoo` class as part of this exercise, while the `Animal`, `Lion`, and `Elephant` classes are already defined for you."
+    },
+    {
+      "path": "Animal.java",
+      "content": "package de.tum.test;\n\npublic abstract class Animal {\n    public abstract void makeSound();\n    public void eat() {\n        System.out.println(\"This animal is eating.\");\n    }\n}\n"
+    },
+    {
+      "path": "Lion.java",
+      "content": "package de.tum.test;\n\npublic class Lion extends Animal {\n    @Override\n    public void makeSound() {\n        System.out.println(\"Roar!\");\n    }\n}\n"
+    },
+    {
+      "path": "Elephant.java",
+      "content": "package de.tum.test;\n\npublic class Elephant extends Animal {\n    @Override\n    public void makeSound() {\n        System.out.println(\"Trumpet!\");\n    }\n}\n"
+    },
+    {
+      "path": "Zoo.java",
+      "content": "package de.tum.test;\n\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic class Zoo {\n    private List<Animal> animals = new ArrayList<>();\n\n    public void addAnimal(Animal animal) {\n        animals.add(animal);\n    }\n\n    public void makeAllSounds() {\n        for (Animal animal : animals) {\n            animal.makeSound();\n        }\n    }\n}\n"
+    },
+    {
+      "path": "ZooTest.java",
+      "content": "import static org.junit.jupiter.api.Assertions.*;\nimport org.junit.jupiter.api.Test;\n\ndefault class ZooTest {\n    @Test\n    public void testAddAnimal() {\n        Zoo zoo = new Zoo();\n        Lion lion = new Lion();\n        zoo.addAnimal(lion);\n        assertEquals(1, zoo.getAnimals().size());\n    }\n\n    @Test\n    public void testMakeAllSounds() {\n        Zoo zoo = new Zoo();\n        Lion lion = new Lion();\n        Elephant elephant = new Elephant();\n        zoo.addAnimal(lion);\n        zoo.addAnimal(elephant);\n        // Redirect output or use a mocking framework to test sounds\n        zoo.makeAllSounds();\n    }\n}\n"
+    },
+    {
+      "path": "AnimalTest.java",
+      "content": "import static org.junit.jupiter.api.Assertions.*;\nimport org.junit.jupiter.api.Test;\n\ndefault class AnimalTest {\n    @Test\n    public void testMakeSound() {\n        Lion lion = new Lion();\n        assertDoesNotThrow(() -> lion.makeSound());\n        // More assertions can be added to capture output if necessary\n    }\n}\n"
+    }
+  ]
+}

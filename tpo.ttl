@@ -1,0 +1,246 @@
+@prefix : <https://aet.cit.tum.de/tpo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tpo: <https://aet.cit.tum.de/tpo#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://aet.cit.tum.de/tpo#> .
+
+<https://aet.cit.tum.de/tpo> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://aet.cit.tum.de/tpo#belongsToKnowledgeArea
+tpo:belongsToKnowledgeArea rdf:type owl:ObjectProperty ;
+                           owl:inverseOf tpo:hasStandardizedCompetency ;
+                           rdfs:domain tpo:StandardizedCompetency ;
+                           rdfs:range tpo:KnowledgeArea .
+
+
+###  https://aet.cit.tum.de/tpo#belongsToUnit
+tpo:belongsToUnit rdf:type owl:ObjectProperty ;
+                  rdfs:domain tpo:CourseCompetency ;
+                  rdfs:range tpo:CourseUnit .
+
+
+###  https://aet.cit.tum.de/tpo#extends
+tpo:extends rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf tpo:hasCompetencyDependency ;
+            rdf:type owl:TransitiveProperty .
+
+
+###  https://aet.cit.tum.de/tpo#hasCompetencyDependency
+tpo:hasCompetencyDependency rdf:type owl:ObjectProperty ,
+                                     owl:TransitiveProperty ;
+                            rdfs:domain tpo:CourseCompetency ;
+                            rdfs:range tpo:CourseCompetency .
+
+
+###  https://aet.cit.tum.de/tpo#hasCompetencyTaxonomy
+tpo:hasCompetencyTaxonomy rdf:type owl:ObjectProperty ;
+                          rdfs:domain tpo:Competency ;
+                          rdfs:range tpo:CompetencyTaxonomy .
+
+
+###  https://aet.cit.tum.de/tpo#hasCourseCompetency
+tpo:hasCourseCompetency rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain tpo:Course ;
+                        rdfs:range tpo:CourseCompetency .
+
+
+###  https://aet.cit.tum.de/tpo#hasCourseUnit
+tpo:hasCourseUnit rdf:type owl:ObjectProperty ;
+                  rdfs:domain tpo:Course ;
+                  rdfs:range tpo:CourseUnit .
+
+
+###  https://aet.cit.tum.de/tpo#hasPrerequisite
+tpo:hasPrerequisite rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain tpo:Course ;
+                    rdfs:range tpo:Prerequisite .
+
+
+###  https://aet.cit.tum.de/tpo#hasStandardizedCompetency
+tpo:hasStandardizedCompetency rdf:type owl:ObjectProperty ;
+                              rdfs:domain tpo:KnowledgeArea ;
+                              rdfs:range tpo:StandardizedCompetency .
+
+
+###  https://aet.cit.tum.de/tpo#linksTo
+tpo:linksTo rdf:type owl:ObjectProperty ,
+                     owl:SymmetricProperty ;
+            rdfs:domain tpo:CourseCompetency ;
+            rdfs:range tpo:StandardizedCompetency .
+
+
+###  https://aet.cit.tum.de/tpo#matches
+tpo:matches rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf tpo:hasCompetencyDependency ;
+            rdf:type owl:SymmetricProperty .
+
+
+###  https://aet.cit.tum.de/tpo#requires
+tpo:requires rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf tpo:hasCompetencyDependency ;
+             rdf:type owl:TransitiveProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Can be used to describe the description of tpo:Course, tpc:CourseCompetency, etc" .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Can be used to specify the title of tpo:Course, course competency, knowledge area, standardized competency" .
+
+
+###  https://aet.cit.tum.de/tpo#isOptional
+tpo:isOptional rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "Can be used to specify whether a course competency is optional" .
+
+
+###  https://aet.cit.tum.de/tpo#semester
+tpo:semester rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Can be used to describe the semester of an offered course" .
+
+
+###  https://aet.cit.tum.de/tpo#shortName
+tpo:shortName rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Can be used to specify the short name of a course" .
+
+
+###  https://aet.cit.tum.de/tpo#shortTitle
+tpo:shortTitle rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Can be used to specify the short title of a knowledge area" .
+
+
+###  https://aet.cit.tum.de/tpo#softDueDate
+tpo:softDueDate rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:range xsd:dateTime ;
+                rdfs:comment "Can be used to specify the soft due date of a course competency" .
+
+
+###  https://aet.cit.tum.de/tpo#unit
+tpo:unit rdf:type owl:DatatypeProperty ;
+         rdfs:domain tpo:CourseCompetency ;
+         rdfs:range xsd:integer ;
+         rdfs:comment "Specifies the lecture unit number a course competency belongs to. Used to group competencies by week or topic in the course schedule." .
+
+
+###  https://schema.org/endDate
+schema:endDate rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:dateTime ;
+               rdfs:comment "Can be used to describe the end date of a course" .
+
+
+###  https://schema.org/schemaVersion
+schema:schemaVersion rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Can be used to specify the version of a standardized competency" .
+
+
+###  https://schema.org/startDate
+schema:startDate rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:comment "Can be used to specify the start date of a course" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://aet.cit.tum.de/tpo#Competency
+tpo:Competency rdf:type owl:Class .
+
+
+###  https://aet.cit.tum.de/tpo#CompetencyTaxonomy
+tpo:CompetencyTaxonomy rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:oneOf ( tpo:Apply
+                                                         tpo:Create
+                                                         tpo:Evaluate
+                                                         tpo:Remember
+                                                         tpo:Understand
+                                                       )
+                                           ] .
+
+
+###  https://aet.cit.tum.de/tpo#Course
+tpo:Course rdf:type owl:Class .
+
+
+###  https://aet.cit.tum.de/tpo#CourseCompetency
+tpo:CourseCompetency rdf:type owl:Class ;
+                     rdfs:subClassOf tpo:Competency .
+
+
+###  https://aet.cit.tum.de/tpo#CourseUnit
+tpo:CourseUnit rdf:type owl:Class .
+
+
+###  https://aet.cit.tum.de/tpo#KnowledgeArea
+tpo:KnowledgeArea rdf:type owl:Class .
+
+
+###  https://aet.cit.tum.de/tpo#Prerequisite
+tpo:Prerequisite rdf:type owl:Class ;
+                 rdfs:subClassOf tpo:Competency .
+
+
+###  https://aet.cit.tum.de/tpo#StandardizedCompetency
+tpo:StandardizedCompetency rdf:type owl:Class ;
+                           rdfs:subClassOf tpo:Competency .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://aet.cit.tum.de/tpo#Apply
+tpo:Apply rdf:type owl:NamedIndividual ,
+                   tpo:CompetencyTaxonomy .
+
+
+###  https://aet.cit.tum.de/tpo#Create
+tpo:Create rdf:type owl:NamedIndividual ,
+                    tpo:CompetencyTaxonomy .
+
+
+###  https://aet.cit.tum.de/tpo#Evaluate
+tpo:Evaluate rdf:type owl:NamedIndividual ,
+                      tpo:CompetencyTaxonomy .
+
+
+###  https://aet.cit.tum.de/tpo#Remember
+tpo:Remember rdf:type owl:NamedIndividual ,
+                      tpo:CompetencyTaxonomy .
+
+
+###  https://aet.cit.tum.de/tpo#Understand
+tpo:Understand rdf:type owl:NamedIndividual ,
+                        tpo:CompetencyTaxonomy .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

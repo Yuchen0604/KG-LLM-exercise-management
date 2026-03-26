@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "path": "problem-statement.md",
+      "content": "# User Management System Exercise\n\n## Objective\nThe goal of this exercise is to design and implement a simple User Management System in Java, focusing on key programming competencies such as Object References, Null References, and Object Equality.\n\n## Requirements\n1. **User Class**: Create a class named `User` with the following features:\n   - A constructor that initializes a user's name and email.\n   - Getter methods to retrieve the name and email of a user.\n   - Override the `equals` method to provide a meaningful equality check between `User` objects.\n   - Override the `hashCode` method to ensure consistency with `equals`.\n\n2. **UserManager Class**: Create a class named `UserManager` that manages user operations:\n   - Implement the `createUser` method to instantiate a new `User` object and add it to the database.\n   - Implement the `findUserByEmail` method to locate a user by their email address.\n   - Implement the `deleteUser` method to remove a user based on their email address.\n\n3. **UserController Class**: Create a class named `UserController` to handle user registration and removal:\n   - Implement the `registerUser` method which takes a user’s name and email and calls the appropriate method in `UserManager`.\n   - Implement the `removeUser` method to facilitate user deletion via `UserManager`.\n\n4. **UserDatabase Class**: Create a class named `UserDatabase` to store `User` objects:\n   - Implement the `addUser` method to add a user to the database.\n   - Implement the `getUser` method to return a user based on their email address.\n\n## Expected Competencies\n- **Object References**: Understand how Java handles references and the implications of multiple references pointing to the same object.\n- **Null References**: Manage null checks to avoid `NullPointerException` and understand when null values can occur.\n- **Object Equality**: Implement equality checks using both `==` and `equals()` methods appropriately.\n\n## Prerequisites\n- Understand object creation in Java using constructors with parameters.\n\n## Deliverables\nYou are required to submit the implemented classes and relevant test files as outlined in the class structure."
+    },
+    {
+      "path": "User.java",
+      "content": "package de.tum.test;\n\npublic class User {\n    private String name;\n    private String email;\n\n    // TODO: Implement the constructor to initialize name and email.\n    public User(String name, String email) {\n        this.name = name;\n        this.email = email;\n    }\n\n    // TODO: Implement getName to return the user's name.\n    public String getName() {\n        return name;\n    }\n\n    // TODO: Implement getEmail to return the user's email.\n    public String getEmail() {\n        return email;\n    }\n\n    // TODO: Implement equals method to compare User objects logically.\n    @Override\n    public boolean equals(Object obj) {\n        // TODO: Add your implementation here\n    }\n\n    // TODO: Implement hashCode method to support the equals contract.\n    @Override\n    public int hashCode() {\n        // TODO: Add your implementation here\n    }\n}"
+    },
+    {
+      "path": "UserManager.java",
+      "content": "package de.tum.test;\n\npublic class UserManager {\n    // TODO: Implement the method to create a new User and add it to the database.\n    public User createUser(String name, String email) {\n        // TODO: Add your implementation here\n    }\n\n    // TODO: Implement the method to find a User by email.\n    public User findUserByEmail(String email) {\n        // TODO: Add your implementation here\n    }\n\n    // TODO: Implement the method to delete a User by email.\n    public void deleteUser(String email) {\n        // TODO: Add your implementation here\n    }\n}"
+    },
+    {
+      "path": "UserController.java",
+      "content": "package de.tum.test;\n\npublic class UserController {\n    // TODO: Implement the method to register a new User with name and email.\n    public void registerUser(String name, String email) {\n        // TODO: Add your implementation here\n    }\n\n    // TODO: Implement the method to remove a User by email.\n    public void removeUser(String email) {\n        // TODO: Add your implementation here\n    }\n}"
+    },
+    {
+      "path": "UserDatabase.java",
+      "content": "package de.tum.test;\n\nimport java.util.HashMap;\nimport java.util.Map;\n\npublic class UserDatabase {\n    private Map<String, User> userMap = new HashMap<>();\n\n    // TODO: Implement the method to add a User to the database.\n    public void addUser(User user) {\n        // TODO: Add your implementation here\n    }\n\n    // TODO: Implement the method to get a User by email.\n    public User getUser(String email) {\n        // TODO: Add your implementation here\n    }\n}"
+    },
+    {
+      "path": "UserTest.java",
+      "content": "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass UserTest {\n    // TODO: Implement test to verify User creation.\n    @Test\n    public void testUserCreation() {\n        // TODO: Add your implementation here\n    }\n\n    // TODO: Implement test to verify equality of User objects.\n    @Test\n    public void testUserEquality() {\n        // TODO: Add your implementation here\n    }\n\n    // TODO: Implement test for hashCode consistency with equals.\n    @Test\n    public void testUserHashCode() {\n        // TODO: Add your implementation here\n    }\n}"
+    },
+    {
+      "path": "UserManagerTest.java",
+      "content": "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass UserManagerTest {\n    // TODO: Implement test to verify user creation in UserManager.\n    @Test\n    public void testCreateUser() {\n        // TODO: Add your implementation here\n    }\n\n    // TODO: Implement test to verify finding a user by email.\n    @Test\n    public void testFindUserByEmail() {\n        // TODO: Add your implementation here\n    }\n\n    // TODO: Implement test to verify user deletion.\n    @Test\n    public void testDeleteUser() {\n        // TODO: Add your implementation here\n    }\n}"
+    },
+    {
+      "path": "UserControllerTest.java",
+      "content": "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass UserControllerTest {\n    // TODO: Implement test for registering a new user.\n    @Test\n    public void testRegisterUser() {\n        // TODO: Add your implementation here\n    }\n\n    // TODO: Implement test for removing a user.\n    @Test\n    public void testRemoveUser() {\n        // TODO: Add your implementation here\n    }\n}"
+    },
+    {
+      "path": "UserDatabaseTest.java",
+      "content": "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\nclass UserDatabaseTest {\n    // TODO: Implement test for adding a user to the database.\n    @Test\n    public void testAddUser() {\n        // TODO: Add your implementation here\n    }\n\n    // TODO: Implement test for retrieving a user from the database.\n    @Test\n    public void testGetUser() {\n        // TODO: Add your implementation here\n    }\n}"
+    }
+  ]
+}

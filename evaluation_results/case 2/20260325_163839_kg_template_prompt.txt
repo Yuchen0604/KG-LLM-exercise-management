@@ -1,0 +1,236 @@
+
+Based on the following plan:
+
+{
+  "exerciseTheme": "Build a User Management System using object-oriented principles that handles user data and supports null checking.",
+  "classes": [
+    {
+      "name": "User",
+      "type": "class",
+      "file": "User.java",
+      "package": "de.tum.test",
+      "methods": [
+        "String getUsername()",
+        "void setUsername(String username)",
+        "String getEmail()",
+        "void setEmail(String email)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserService",
+      "type": "class",
+      "file": "UserService.java",
+      "package": "de.tum.test",
+      "methods": [
+        "User createUser(String username, String email)",
+        "User findUserByUsername(String username)",
+        "void updateEmail(String username, String newEmail)",
+        "void deleteUser(String username)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserManagementSystem",
+      "type": "class",
+      "file": "UserManagementSystem.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void start()"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "UserNotFoundException",
+      "type": "class",
+      "file": "UserNotFoundException.java",
+      "package": "de.tum.test",
+      "methods": [
+        "UserNotFoundException(String message)"
+      ],
+      "implements": [],
+      "extends": "Exception",
+      "providedToStudent": true
+    },
+    {
+      "name": "UserValidation",
+      "type": "class",
+      "file": "UserValidation.java",
+      "package": "de.tum.test",
+      "methods": [
+        "boolean isValidUsername(String username)",
+        "boolean isValidEmail(String email)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    }
+  ],
+  "designPatterns": [],
+  "studentTodos": 5,
+  "estimatedSolutionLOC": 75,
+  "testClasses": [
+    {
+      "name": "UserServiceTest",
+      "file": "UserServiceTest.java",
+      "testMethods": [
+        "testCreateUser",
+        "testFindUserByUsername",
+        "testUpdateEmail",
+        "testDeleteUser",
+        "testUserNotFound"
+      ]
+    },
+    {
+      "name": "UserValidationTest",
+      "file": "UserValidationTest.java",
+      "testMethods": [
+        "testIsValidUsername",
+        "testIsValidEmail"
+      ]
+    }
+  ],
+  "coveredCompetencies": [
+    "Null References",
+    "Object References",
+    "Object Equality"
+  ],
+  "coveredPrerequisites": [
+    "Object References",
+    "Object Creation",
+    "Objects and Classes"
+  ]
+}
+
+And competencies:
+
+{
+  "https://aet.cit.tum.de/tpo/example#Comp_NullReferences": {
+    "title": "Null References",
+    "description": "Explain the meaning of null as a reference that points to no object, and understand how NullPointerException occurs. Recognize situations where null values may arise and the importance of null checking in defensive programming.",
+    "taxonomy": [
+      "Understand"
+    ],
+    "dependencies": [
+      {
+        "label": "Object References",
+        "description": "Explain how variables hold references to objects rather than objects themselves, and how multiple references can point to the same object. Understand the implications for parameter passing, assignment, and object sharing.",
+        "taxonomy": [
+          "Understand"
+        ],
+        "relations": [
+          "requires"
+        ],
+        "sub_dependencies": [
+          {
+            "label": "Object Creation",
+            "description": "Instantiate objects using constructors with the 'new' keyword, providing appropriate arguments to initialize object state. Apply object creation to build programs that utilize multiple interacting objects.",
+            "taxonomy": [
+              "Apply"
+            ],
+            "relations": [
+              "extends"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://aet.cit.tum.de/tpo/example#Comp_References": {
+    "title": "Object References",
+    "description": "Explain how variables hold references to objects rather than objects themselves, and how multiple references can point to the same object. Understand the implications for parameter passing, assignment, and object sharing.",
+    "taxonomy": [
+      "Understand"
+    ],
+    "dependencies": [
+      {
+        "label": "Object Creation",
+        "description": "Instantiate objects using constructors with the 'new' keyword, providing appropriate arguments to initialize object state. Apply object creation to build programs that utilize multiple interacting objects.",
+        "taxonomy": [
+          "Apply"
+        ],
+        "relations": [
+          "extends"
+        ],
+        "sub_dependencies": [
+          {
+            "label": "Objects and Classes",
+            "description": "Explain the relationship between classes and objects, describing how a class serves as a blueprint that defines state (fields) and behavior (methods), while objects are individual instances created from that blueprint.",
+            "taxonomy": [
+              "Understand"
+            ],
+            "relations": [
+              "requires"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://aet.cit.tum.de/tpo/example#Comp_ObjectEquality": {
+    "title": "Object Equality",
+    "description": "Apply the distinction between reference equality (==) and object equality (equals method) when comparing objects. Use appropriate equality comparisons based on whether identity or logical equivalence is required.",
+    "taxonomy": [
+      "Apply"
+    ],
+    "dependencies": [
+      {
+        "label": "Object Creation",
+        "description": "Instantiate objects using constructors with the 'new' keyword, providing appropriate arguments to initialize object state. Apply object creation to build programs that utilize multiple interacting objects.",
+        "taxonomy": [
+          "Apply"
+        ],
+        "relations": [
+          "extends"
+        ],
+        "sub_dependencies": [
+          {
+            "label": "Objects and Classes",
+            "description": "Explain the relationship between classes and objects, describing how a class serves as a blueprint that defines state (fields) and behavior (methods), while objects are individual instances created from that blueprint.",
+            "taxonomy": [
+              "Understand"
+            ],
+            "relations": [
+              "requires"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Object References",
+        "description": "Explain how variables hold references to objects rather than objects themselves, and how multiple references can point to the same object. Understand the implications for parameter passing, assignment, and object sharing.",
+        "taxonomy": [
+          "Understand"
+        ],
+        "relations": [
+          "extends"
+        ],
+        "sub_dependencies": [
+          {
+            "label": "Object Creation",
+            "description": "Instantiate objects using constructors with the 'new' keyword, providing appropriate arguments to initialize object state. Apply object creation to build programs that utilize multiple interacting objects.",
+            "taxonomy": [
+              "Apply"
+            ],
+            "relations": [
+              "extends"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+Generate:
+- problem-statement.md
+- Java template code
+
+The generated files MUST strictly follow the plan and reflect all listed competencies and prerequisites.
+Return files JSON.

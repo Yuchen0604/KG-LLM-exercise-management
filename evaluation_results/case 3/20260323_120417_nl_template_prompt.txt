@@ -1,0 +1,113 @@
+
+Based on the following plan:
+
+{
+  "exerciseTheme": "Zoo Animal Behavior System",
+  "classes": [
+    {
+      "name": "Animal",
+      "type": "class",
+      "file": "Animal.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()",
+        "void eat()"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": false
+    },
+    {
+      "name": "Lion",
+      "type": "class",
+      "file": "Lion.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()"
+      ],
+      "implements": [],
+      "extends": "Animal",
+      "providedToStudent": false
+    },
+    {
+      "name": "Elephant",
+      "type": "class",
+      "file": "Elephant.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()"
+      ],
+      "implements": [],
+      "extends": "Animal",
+      "providedToStudent": false
+    },
+    {
+      "name": "Zoo",
+      "type": "class",
+      "file": "Zoo.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void addAnimal(Animal animal)",
+        "void makeAllSounds()"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    }
+  ],
+  "designPatterns": [],
+  "studentTodos": 4,
+  "estimatedSolutionLOC": 70,
+  "testClasses": [
+    {
+      "name": "ZooTest",
+      "file": "ZooTest.java",
+      "testMethods": [
+        "void testAddAnimal()",
+        "void testMakeAllSounds()"
+      ]
+    },
+    {
+      "name": "AnimalTest",
+      "file": "AnimalTest.java",
+      "testMethods": [
+        "void testMakeSound()"
+      ]
+    }
+  ],
+  "coveredCompetencies": [
+    "Dynamic Binding",
+    "Inheritance"
+  ],
+  "coveredPrerequisites": [
+    "Method Overriding",
+    "Polymorphism",
+    "Class Definition"
+  ]
+}
+
+And description:
+
+
+The exercise should focus on the following competencies:
+
+Dynamic Binding:
+Analyze how method calls are resolved at runtime depending on the actual object type rather than the declared type. This involves understanding how polymorphic method calls behave in class hierarchies.
+
+Inheritance:
+Apply inheritance using the 'extends' keyword to build class hierarchies and reuse functionality.
+
+The following prerequisite knowledge is required:
+
+- Method Overriding: understanding how subclasses provide specialized implementations of inherited methods.
+- Polymorphism: understanding how objects of different types can be treated uniformly via a common superclass.
+- Class Definition: ability to design and implement classes with fields and methods.
+
+
+
+Generate:
+- problem-statement.md
+- Java template code
+
+The generated files MUST strictly follow the plan and reflect all listed competencies and prerequisites.
+Return files JSON.

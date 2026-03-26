@@ -1,0 +1,107 @@
+
+You are planning a Java programming exercise. Output ONLY valid JSON matching this schema, no markdown, no explanation.
+
+## Dependency Constraints (MANDATORY)
+
+The exercise MUST:
+- Cover all prerequisite competencies required for the target competencies
+- Not omit any required prerequisite
+- Ensure that all dependencies are satisfied before advanced concepts are used
+- Each prerequisite MUST be explicitly demonstrated in the code structure or behavior
+
+The exercise MUST NOT:
+- Use any concept that is not included in the listed competencies or their prerequisites
+- Introduce advanced concepts without their prerequisites being covered
+
+## Validation Requirement
+
+You MUST explicitly list:
+- All competencies covered in the exercise
+- All prerequisite competencies that are required and covered
+
+## Exercise Type: Standard Exercise (standard)
+
+Targets:
+- Classes: 6-8
+- Student TODOs: 4-5
+- Test methods: 8-20
+- Solution LOC range: 50-120
+
+## Exercise Context
+
+- **Title**: User Management System
+- **Package**: de.tum.test
+
+### Competencies
+
+- Null References
+  Taxonomy: Understand
+  Description: Explain the meaning of null as a reference that points to no object, and understand how NullPointerException occurs. Recognize situations where null values may arise and the importance of null checking in defensive programming.
+
+- Object References
+  Taxonomy: Understand
+  Description: Explain how variables hold references to objects rather than objects themselves, and how multiple references can point to the same object. Understand the implications for parameter passing, assignment, and object sharing.
+
+- Object Equality
+  Taxonomy: Apply
+  Description: Apply the distinction between reference equality (==) and object equality (equals method) when comparing objects. Use appropriate equality comparisons based on whether identity or logical equivalence is required.
+
+
+
+### Prerequisites
+
+- Object References
+  Taxonomy: Understand
+  Description: Explain how variables hold references to objects rather than objects themselves, and how multiple references can point to the same object. Understand the implications for parameter passing, assignment, and object sharing.
+
+- Object Creation
+  Taxonomy: Apply
+  Description: Instantiate objects using constructors with the 'new' keyword, providing appropriate arguments to initialize object state. Apply object creation to build programs that utilize multiple interacting objects.
+
+- Objects and Classes
+  Taxonomy: Understand
+  Description: Explain the relationship between classes and objects, describing how a class serves as a blueprint that defines state (fields) and behavior (methods), while objects are individual instances created from that blueprint.
+
+
+
+### Competency Dependencies
+
+Null References [requires] Object References
+Object Equality [extends] Object Creation
+Object Equality [extends] Object References
+Object References [extends] Object Creation
+Object Creation [requires] Objects and Classes
+
+
+
+## Required JSON Schema
+
+{
+  "exerciseTheme": "string — a brief thematic description",
+  "classes": [
+    {
+      "name": "string — class name",
+      "type": "class | interface | enum | abstract class | record",
+      "file": "string — relative file path",
+      "package": "string — Java package",
+      "methods": ["string — method signatures"],
+      "implements": ["string — interface names (optional)"],
+      "extends": "string — parent class (optional)",
+      "providedToStudent": "boolean"
+    }
+  ],
+  "designPatterns": ["string"],
+  "studentTodos": "number — choose a value within target range",
+  "estimatedSolutionLOC": "number",
+  "testClasses": [
+    {
+      "name": "string",
+      "file": "string",
+      "testMethods": ["string"]
+    }
+  ],
+  "coveredCompetencies": ["string"],
+  "coveredPrerequisites": ["string"]
+}
+
+Output ONLY the JSON object. No markdown fences, no commentary.

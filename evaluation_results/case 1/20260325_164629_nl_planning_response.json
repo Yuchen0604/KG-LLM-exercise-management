@@ -1,0 +1,110 @@
+{
+  "exerciseTheme": "File Processing System",
+  "classes": [
+    {
+      "name": "FileProcessor",
+      "type": "class",
+      "file": "FileProcessor.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void processFile(String filePath)",
+        "void cleanUp()"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "FileReader",
+      "type": "class",
+      "file": "FileReader.java",
+      "package": "de.tum.test",
+      "methods": [
+        "String readFromFile(String filePath) throws IOException"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "ErrorReporter",
+      "type": "class",
+      "file": "ErrorReporter.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void reportError(String message)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "DataParser",
+      "type": "class",
+      "file": "DataParser.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void parseData(String data)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "MainApplication",
+      "type": "class",
+      "file": "MainApplication.java",
+      "package": "de.tum.test",
+      "methods": [
+        "public static void main(String[] args)"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    }
+  ],
+  "designPatterns": [],
+  "studentTodos": 5,
+  "estimatedSolutionLOC": 78,
+  "testClasses": [
+    {
+      "name": "FileProcessorTest",
+      "file": "FileProcessorTest.java",
+      "testMethods": [
+        "void testProcessFile_ValidPath()",
+        "void testProcessFile_InvalidPath()",
+        "void testCleanUp()"
+      ]
+    },
+    {
+      "name": "ErrorReporterTest",
+      "file": "ErrorReporterTest.java",
+      "testMethods": [
+        "void testReportError()"
+      ]
+    },
+    {
+      "name": "DataParserTest",
+      "file": "DataParserTest.java",
+      "testMethods": [
+        "void testParseData()"
+      ]
+    },
+    {
+      "name": "FileReaderTest",
+      "file": "FileReaderTest.java",
+      "testMethods": [
+        "void testReadFromFile_ValidFile()",
+        "void testReadFromFile_InvalidFile()"
+      ]
+    }
+  ],
+  "coveredCompetencies": [
+    "Try-Catch Blocks",
+    "Exceptions"
+  ],
+  "coveredPrerequisites": [
+    "Exception handling strategies",
+    "Distinction between checked and unchecked exceptions"
+  ]
+}

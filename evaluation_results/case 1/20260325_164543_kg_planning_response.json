@@ -1,0 +1,118 @@
+{
+  "exerciseTheme": "File Processing System",
+  "classes": [
+    {
+      "name": "FileProcessor",
+      "type": "class",
+      "file": "FileProcessor.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void processFile(String filePath)",
+        "void handleException(Exception e)"
+      ],
+      "implements": [],
+      "extends": "Object",
+      "providedToStudent": true
+    },
+    {
+      "name": "FileNotFoundException",
+      "type": "class",
+      "file": "FileNotFoundException.java",
+      "package": "de.tum.test",
+      "methods": [
+        "String getMessage()"
+      ],
+      "implements": [],
+      "extends": "Exception",
+      "providedToStudent": true
+    },
+    {
+      "name": "FileReader",
+      "type": "class",
+      "file": "FileReader.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void readFile(String filePath)"
+      ],
+      "implements": [],
+      "extends": "Object",
+      "providedToStudent": true
+    },
+    {
+      "name": "FileWriter",
+      "type": "class",
+      "file": "FileWriter.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void writeFile(String filePath, String content)"
+      ],
+      "implements": [],
+      "extends": "Object",
+      "providedToStudent": true
+    },
+    {
+      "name": "InvalidFileFormatException",
+      "type": "class",
+      "file": "InvalidFileFormatException.java",
+      "package": "de.tum.test",
+      "methods": [
+        "String getMessage()"
+      ],
+      "implements": [],
+      "extends": "Exception",
+      "providedToStudent": true
+    },
+    {
+      "name": "Application",
+      "type": "class",
+      "file": "Application.java",
+      "package": "de.tum.test",
+      "methods": [
+        "static void main(String[] args)"
+      ],
+      "implements": [],
+      "extends": "Object",
+      "providedToStudent": true
+    }
+  ],
+  "designPatterns": [],
+  "studentTodos": 5,
+  "estimatedSolutionLOC": 90,
+  "testClasses": [
+    {
+      "name": "FileProcessorTest",
+      "file": "FileProcessorTest.java",
+      "testMethods": [
+        "void testProcessFileWithValidPath()",
+        "void testProcessFileWithInvalidPath()",
+        "void testHandleException()"
+      ]
+    },
+    {
+      "name": "FileReaderTest",
+      "file": "FileReaderTest.java",
+      "testMethods": [
+        "void testReadFileSuccessfully()",
+        "void testReadFileThrowsException()"
+      ]
+    },
+    {
+      "name": "FileWriterTest",
+      "file": "FileWriterTest.java",
+      "testMethods": [
+        "void testWriteFileSuccessfully()",
+        "void testWriteFileThrowsException()"
+      ]
+    }
+  ],
+  "coveredCompetencies": [
+    "Try-Catch Blocks",
+    "Exceptions"
+  ],
+  "coveredPrerequisites": [
+    "Exceptions",
+    "Inheritance",
+    "Class Definition",
+    "Objects and Classes"
+  ]
+}

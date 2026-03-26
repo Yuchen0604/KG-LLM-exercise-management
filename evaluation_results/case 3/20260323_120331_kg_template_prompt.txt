@@ -1,0 +1,294 @@
+
+Based on the following plan:
+
+{
+  "exerciseTheme": "Zoo Animal Behavior System",
+  "classes": [
+    {
+      "name": "Animal",
+      "type": "class",
+      "file": "Animal.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()",
+        "void eat()"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "Mammal",
+      "type": "class",
+      "file": "Mammal.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void nurse()"
+      ],
+      "implements": [],
+      "extends": "Animal",
+      "providedToStudent": true
+    },
+    {
+      "name": "Bird",
+      "type": "class",
+      "file": "Bird.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void fly()"
+      ],
+      "implements": [],
+      "extends": "Animal",
+      "providedToStudent": true
+    },
+    {
+      "name": "Dog",
+      "type": "class",
+      "file": "Dog.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()",
+        "void fetch()"
+      ],
+      "implements": [],
+      "extends": "Mammal",
+      "providedToStudent": true
+    },
+    {
+      "name": "Cat",
+      "type": "class",
+      "file": "Cat.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()"
+      ],
+      "implements": [],
+      "extends": "Mammal",
+      "providedToStudent": true
+    },
+    {
+      "name": "Parrot",
+      "type": "class",
+      "file": "Parrot.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()"
+      ],
+      "implements": [],
+      "extends": "Bird",
+      "providedToStudent": true
+    }
+  ],
+  "designPatterns": [],
+  "studentTodos": 5,
+  "estimatedSolutionLOC": 85,
+  "testClasses": [
+    {
+      "name": "AnimalTest",
+      "file": "AnimalTest.java",
+      "testMethods": [
+        "testMakeSound",
+        "testEat"
+      ]
+    },
+    {
+      "name": "MammalTest",
+      "file": "MammalTest.java",
+      "testMethods": [
+        "testMakeSound",
+        "testNurse"
+      ]
+    },
+    {
+      "name": "BirdTest",
+      "file": "BirdTest.java",
+      "testMethods": [
+        "testFly",
+        "testMakeSound"
+      ]
+    },
+    {
+      "name": "DogTest",
+      "file": "DogTest.java",
+      "testMethods": [
+        "testMakeSound",
+        "testFetch"
+      ]
+    },
+    {
+      "name": "CatTest",
+      "file": "CatTest.java",
+      "testMethods": [
+        "testMakeSound"
+      ]
+    },
+    {
+      "name": "ParrotTest",
+      "file": "ParrotTest.java",
+      "testMethods": [
+        "testMakeSound"
+      ]
+    }
+  ],
+  "coveredCompetencies": [
+    "Dynamic Binding",
+    "Inheritance"
+  ],
+  "coveredPrerequisites": [
+    "Inheritance",
+    "Class Definition",
+    "Objects and Classes",
+    "Method Overriding",
+    "Polymorphism",
+    "Static vs Dynamic Types"
+  ]
+}
+
+And competencies:
+
+{
+  "https://aet.cit.tum.de/tpo/example#Comp_DynamicBinding": {
+    "title": "Dynamic Binding",
+    "description": "Analyze how method calls are resolved at runtime based on the actual object type rather than the declared variable type. Trace polymorphic method invocations through class hierarchies to predict program behavior.",
+    "taxonomy": [
+      "Analyze"
+    ],
+    "dependencies": [
+      {
+        "label": "Inheritance",
+        "description": "Apply inheritance to create subclass relationships using the 'extends' keyword, reusing and extending superclass functionality. Use inheritance to model is-a relationships and establish class hierarchies that reduce code duplication.",
+        "taxonomy": [
+          "Apply"
+        ],
+        "relations": [
+          "requires"
+        ],
+        "sub_dependencies": [
+          {
+            "label": "Class Definition",
+            "description": "Design and create complete class definitions that model real-world entities or abstract concepts. Produce well-structured classes with appropriate fields, methods, and constructors that exhibit high cohesion and clear responsibility.",
+            "taxonomy": [
+              "Create"
+            ],
+            "relations": [
+              "extends"
+            ]
+          },
+          {
+            "label": "Objects and Classes",
+            "description": "Explain the relationship between classes and objects, describing how a class serves as a blueprint that defines state (fields) and behavior (methods), while objects are individual instances created from that blueprint.",
+            "taxonomy": [
+              "Understand"
+            ],
+            "relations": [
+              "extends"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Method Overriding",
+        "description": "Apply method overriding to provide specialized implementations of inherited methods in subclasses. Use the @Override annotation, call superclass methods appropriately, and maintain the method contract while customizing behavior.",
+        "taxonomy": [
+          "Apply"
+        ],
+        "relations": [
+          "requires"
+        ],
+        "sub_dependencies": [
+          {
+            "label": "Inheritance",
+            "description": "Apply inheritance to create subclass relationships using the 'extends' keyword, reusing and extending superclass functionality. Use inheritance to model is-a relationships and establish class hierarchies that reduce code duplication.",
+            "taxonomy": [
+              "Apply"
+            ],
+            "relations": [
+              "requires"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Polymorphism",
+        "description": "Explain how polymorphism allows objects of different classes to be treated uniformly through a common supertype. Understand how polymorphism enables flexible, extensible code where new types can be added without modifying existing code.",
+        "taxonomy": [
+          "Understand"
+        ],
+        "relations": [
+          "extends"
+        ],
+        "sub_dependencies": [
+          {
+            "label": "Inheritance",
+            "description": "Apply inheritance to create subclass relationships using the 'extends' keyword, reusing and extending superclass functionality. Use inheritance to model is-a relationships and establish class hierarchies that reduce code duplication.",
+            "taxonomy": [
+              "Apply"
+            ],
+            "relations": [
+              "requires"
+            ]
+          },
+          {
+            "label": "Static vs Dynamic Types",
+            "description": "Explain the distinction between a variable's declared (static) type and the actual runtime (dynamic) type of the object it references. Understand how Java's type system uses compile-time type checking while supporting runtime polymorphism.",
+            "taxonomy": [
+              "Understand"
+            ],
+            "relations": [
+              "requires"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://aet.cit.tum.de/tpo/example#Comp_Inheritance": {
+    "title": "Inheritance",
+    "description": "Apply inheritance to create subclass relationships using the 'extends' keyword, reusing and extending superclass functionality. Use inheritance to model is-a relationships and establish class hierarchies that reduce code duplication.",
+    "taxonomy": [
+      "Apply"
+    ],
+    "dependencies": [
+      {
+        "label": "Class Definition",
+        "description": "Design and create complete class definitions that model real-world entities or abstract concepts. Produce well-structured classes with appropriate fields, methods, and constructors that exhibit high cohesion and clear responsibility.",
+        "taxonomy": [
+          "Create"
+        ],
+        "relations": [
+          "extends"
+        ],
+        "sub_dependencies": [
+          {
+            "label": "Objects and Classes",
+            "description": "Explain the relationship between classes and objects, describing how a class serves as a blueprint that defines state (fields) and behavior (methods), while objects are individual instances created from that blueprint.",
+            "taxonomy": [
+              "Understand"
+            ],
+            "relations": [
+              "extends"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Objects and Classes",
+        "description": "Explain the relationship between classes and objects, describing how a class serves as a blueprint that defines state (fields) and behavior (methods), while objects are individual instances created from that blueprint.",
+        "taxonomy": [
+          "Understand"
+        ],
+        "relations": [
+          "extends"
+        ],
+        "sub_dependencies": []
+      }
+    ]
+  }
+}
+
+Generate:
+- problem-statement.md
+- Java template code
+
+The generated files MUST strictly follow the plan and reflect all listed competencies and prerequisites.
+Return files JSON.

@@ -1,0 +1,106 @@
+{
+  "https://aet.cit.tum.de/tpo/example#Comp_TryCatch": {
+    "title": "Try-Catch Blocks",
+    "description": "Apply try-catch-finally blocks to handle exceptions gracefully and maintain program stability. Use appropriate exception handling strategies including catching specific exceptions, resource cleanup, and meaningful error recovery or reporting.",
+    "taxonomy": [
+      "Apply"
+    ],
+    "dependencies": [
+      {
+        "label": "Exceptions",
+        "description": "Explain Java's exception mechanism including the distinction between checked and unchecked exceptions. Understand how exceptions represent error conditions, propagate through the call stack, and differ from normal return values.",
+        "taxonomy": [
+          "Understand"
+        ],
+        "relations": [
+          "requires"
+        ],
+        "sub_dependencies": [
+          {
+            "label": "Inheritance",
+            "description": "Apply inheritance to create subclass relationships using the 'extends' keyword, reusing and extending superclass functionality. Use inheritance to model is-a relationships and establish class hierarchies that reduce code duplication.",
+            "taxonomy": [
+              "Apply"
+            ],
+            "relations": [
+              "requires"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Inheritance",
+        "description": "Apply inheritance to create subclass relationships using the 'extends' keyword, reusing and extending superclass functionality. Use inheritance to model is-a relationships and establish class hierarchies that reduce code duplication.",
+        "taxonomy": [
+          "Apply"
+        ],
+        "relations": [
+          "requires"
+        ],
+        "sub_dependencies": [
+          {
+            "label": "Class Definition",
+            "description": "Design and create complete class definitions that model real-world entities or abstract concepts. Produce well-structured classes with appropriate fields, methods, and constructors that exhibit high cohesion and clear responsibility.",
+            "taxonomy": [
+              "Create"
+            ],
+            "relations": [
+              "extends"
+            ]
+          },
+          {
+            "label": "Objects and Classes",
+            "description": "Explain the relationship between classes and objects, describing how a class serves as a blueprint that defines state (fields) and behavior (methods), while objects are individual instances created from that blueprint.",
+            "taxonomy": [
+              "Understand"
+            ],
+            "relations": [
+              "extends"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://aet.cit.tum.de/tpo/example#Comp_Exceptions": {
+    "title": "Exceptions",
+    "description": "Explain Java's exception mechanism including the distinction between checked and unchecked exceptions. Understand how exceptions represent error conditions, propagate through the call stack, and differ from normal return values.",
+    "taxonomy": [
+      "Understand"
+    ],
+    "dependencies": [
+      {
+        "label": "Inheritance",
+        "description": "Apply inheritance to create subclass relationships using the 'extends' keyword, reusing and extending superclass functionality. Use inheritance to model is-a relationships and establish class hierarchies that reduce code duplication.",
+        "taxonomy": [
+          "Apply"
+        ],
+        "relations": [
+          "requires"
+        ],
+        "sub_dependencies": [
+          {
+            "label": "Class Definition",
+            "description": "Design and create complete class definitions that model real-world entities or abstract concepts. Produce well-structured classes with appropriate fields, methods, and constructors that exhibit high cohesion and clear responsibility.",
+            "taxonomy": [
+              "Create"
+            ],
+            "relations": [
+              "extends"
+            ]
+          },
+          {
+            "label": "Objects and Classes",
+            "description": "Explain the relationship between classes and objects, describing how a class serves as a blueprint that defines state (fields) and behavior (methods), while objects are individual instances created from that blueprint.",
+            "taxonomy": [
+              "Understand"
+            ],
+            "relations": [
+              "extends"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

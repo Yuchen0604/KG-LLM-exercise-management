@@ -1,0 +1,142 @@
+{
+  "exerciseTheme": "Zoo Animal Behavior System",
+  "classes": [
+    {
+      "name": "Animal",
+      "type": "class",
+      "file": "Animal.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()",
+        "void eat()"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    },
+    {
+      "name": "Mammal",
+      "type": "class",
+      "file": "Mammal.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void nurse()"
+      ],
+      "implements": [],
+      "extends": "Animal",
+      "providedToStudent": true
+    },
+    {
+      "name": "Bird",
+      "type": "class",
+      "file": "Bird.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void fly()"
+      ],
+      "implements": [],
+      "extends": "Animal",
+      "providedToStudent": true
+    },
+    {
+      "name": "Dog",
+      "type": "class",
+      "file": "Dog.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()",
+        "void fetch()"
+      ],
+      "implements": [],
+      "extends": "Mammal",
+      "providedToStudent": true
+    },
+    {
+      "name": "Cat",
+      "type": "class",
+      "file": "Cat.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()"
+      ],
+      "implements": [],
+      "extends": "Mammal",
+      "providedToStudent": true
+    },
+    {
+      "name": "Parrot",
+      "type": "class",
+      "file": "Parrot.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()"
+      ],
+      "implements": [],
+      "extends": "Bird",
+      "providedToStudent": true
+    }
+  ],
+  "designPatterns": [],
+  "studentTodos": 5,
+  "estimatedSolutionLOC": 85,
+  "testClasses": [
+    {
+      "name": "AnimalTest",
+      "file": "AnimalTest.java",
+      "testMethods": [
+        "testMakeSound",
+        "testEat"
+      ]
+    },
+    {
+      "name": "MammalTest",
+      "file": "MammalTest.java",
+      "testMethods": [
+        "testMakeSound",
+        "testNurse"
+      ]
+    },
+    {
+      "name": "BirdTest",
+      "file": "BirdTest.java",
+      "testMethods": [
+        "testFly",
+        "testMakeSound"
+      ]
+    },
+    {
+      "name": "DogTest",
+      "file": "DogTest.java",
+      "testMethods": [
+        "testMakeSound",
+        "testFetch"
+      ]
+    },
+    {
+      "name": "CatTest",
+      "file": "CatTest.java",
+      "testMethods": [
+        "testMakeSound"
+      ]
+    },
+    {
+      "name": "ParrotTest",
+      "file": "ParrotTest.java",
+      "testMethods": [
+        "testMakeSound"
+      ]
+    }
+  ],
+  "coveredCompetencies": [
+    "Dynamic Binding",
+    "Inheritance"
+  ],
+  "coveredPrerequisites": [
+    "Inheritance",
+    "Class Definition",
+    "Objects and Classes",
+    "Method Overriding",
+    "Polymorphism",
+    "Static vs Dynamic Types"
+  ]
+}

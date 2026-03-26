@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "problem-statement.md",
+      "content": "# File Processing System Exercise\n\n## Problem Statement\n\nIn this exercise, you will implement a basic file processing system in Java. The system will involve several classes that work together to read data from files, parse the data, report errors if they occur, and process the file content in a structured manner. You will enhance your understanding of exception handling by applying try-catch blocks effectively throughout the application.\n\n### Competencies Covered\n- Try-Catch Blocks: Handle exceptions gracefully using try-catch-finally, ensuring program stability and proper resource management.\n- Exceptions: Understand Java’s exception mechanism, the difference between checked and unchecked exceptions, and how exceptions represent error conditions.\n\n### Task Details\n- **FileProcessor**: This class is responsible for processing files. Implement the `processFile(String filePath)` method to read a file from the given file path. Use exception handling to manage any errors that may arise during file processing. Implement the `cleanUp()` method to perform any necessary cleanup actions after processing.\n\n- **FileReader**: Responsible for reading the data from files. Complete the `readFromFile(String filePath)` method, ensuring it throws an IOException if the file cannot be read due to issues like non-existence or permission denied.\n\n- **ErrorReporter**: Implement the `reportError(String message)` method to handle error reporting. This method should output the error message to the console or a log file.\n\n- **DataParser**: In this class, implement the `parseData(String data)` method, which is responsible for processing the data read from the file. Ensure to handle potential parsing exceptions appropriately.\n\n- **MainApplication**: The entry point of the application. Implement the `main(String[] args)` method to coordinate the file processing task, making calls to the `FileProcessor` and handling any exceptions that are thrown.\n\n### Testing\nYou will also provide unit tests for each of the classes listed above to verify their functionality and correctness under various scenarios, especially handling error cases.\n\nEnsure all exceptions are properly caught, and appropriate messages are reported. Properly document your code to explain the purpose and the flow of exception handling."
+    },
+    {
+      "path": "de/tum/test/FileProcessor.java",
+      "content": "package de.tum.test;\n\npublic class FileProcessor {\n    // TODO: Implement file processing logic in the processFile method\n    public void processFile(String filePath) {\n        // Try to read the file and handle exceptions\n        // Use try-catch to manage IOException\n    }\n\n    // TODO: Implement resource cleanup logic in the cleanUp method\n    public void cleanUp() {\n        // Perform cleanup actions\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/FileReader.java",
+      "content": "package de.tum.test;\n\nimport java.io.IOException;\n\npublic class FileReader {\n    // TODO: Implement file reading logic in the readFromFile method\n    public String readFromFile(String filePath) throws IOException {\n        // Try reading file content\n        // Handle possible IOExceptions\n        return null; // Placeholder return\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/ErrorReporter.java",
+      "content": "package de.tum.test;\n\npublic class ErrorReporter {\n    // TODO: Implement error reporting logic in the reportError method\n    public void reportError(String message) {\n        // Output the error message to console or log\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/DataParser.java",
+      "content": "package de.tum.test;\n\npublic class DataParser {\n    // TODO: Implement data parsing logic in the parseData method\n    public void parseData(String data) {\n        // Handle parsing exceptions\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/MainApplication.java",
+      "content": "package de.tum.test;\n\npublic class MainApplication {\n    // TODO: Implement the main method to start the application\n    public static void main(String[] args) {\n        // Initialize FileProcessor and handle exceptions\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/FileProcessorTest.java",
+      "content": "package de.tum.test;\n\nimport static org.junit.Assert.*;\nimport org.junit.Test;\n\npublic class FileProcessorTest {\n    @Test\n    public void testProcessFile_ValidPath() {\n        // TODO: Implement test for valid file processing path\n    }\n\n    @Test\n    public void testProcessFile_InvalidPath() {\n        // TODO: Implement test for invalid file processing path\n    }\n\n    @Test\n    public void testCleanUp() {\n        // TODO: Implement test for clean up functionality\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/ErrorReporterTest.java",
+      "content": "package de.tum.test;\n\nimport static org.junit.Assert.*;\nimport org.junit.Test;\n\npublic class ErrorReporterTest {\n    @Test\n    public void testReportError() {\n        // TODO: Implement test for error reporting functionality\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/DataParserTest.java",
+      "content": "package de.tum.test;\n\nimport static org.junit.Assert.*;\nimport org.junit.Test;\n\npublic class DataParserTest {\n    @Test\n    public void testParseData() {\n        // TODO: Implement test for parsing data functionality\n    }\n}\n"
+    },
+    {
+      "path": "de/tum/test/FileReaderTest.java",
+      "content": "package de.tum.test;\n\nimport static org.junit.Assert.*;\nimport org.junit.Test;\nimport java.io.IOException;\n\npublic class FileReaderTest {\n    @Test\n    public void testReadFromFile_ValidFile() {\n        // TODO: Implement test for reading from a valid file\n    }\n\n    @Test\n    public void testReadFromFile_InvalidFile() {\n        // TODO: Implement test for handling an invalid file\n    }\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "exerciseTheme": "Zoo Animal Behavior System",
+  "classes": [
+    {
+      "name": "Animal",
+      "type": "class",
+      "file": "Animal.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()",
+        "void eat()"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": false
+    },
+    {
+      "name": "Lion",
+      "type": "class",
+      "file": "Lion.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()"
+      ],
+      "implements": [],
+      "extends": "Animal",
+      "providedToStudent": false
+    },
+    {
+      "name": "Elephant",
+      "type": "class",
+      "file": "Elephant.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void makeSound()"
+      ],
+      "implements": [],
+      "extends": "Animal",
+      "providedToStudent": false
+    },
+    {
+      "name": "Zoo",
+      "type": "class",
+      "file": "Zoo.java",
+      "package": "de.tum.test",
+      "methods": [
+        "void addAnimal(Animal animal)",
+        "void makeAllSounds()"
+      ],
+      "implements": [],
+      "extends": null,
+      "providedToStudent": true
+    }
+  ],
+  "designPatterns": [],
+  "studentTodos": 4,
+  "estimatedSolutionLOC": 70,
+  "testClasses": [
+    {
+      "name": "ZooTest",
+      "file": "ZooTest.java",
+      "testMethods": [
+        "void testAddAnimal()",
+        "void testMakeAllSounds()"
+      ]
+    },
+    {
+      "name": "AnimalTest",
+      "file": "AnimalTest.java",
+      "testMethods": [
+        "void testMakeSound()"
+      ]
+    }
+  ],
+  "coveredCompetencies": [
+    "Dynamic Binding",
+    "Inheritance"
+  ],
+  "coveredPrerequisites": [
+    "Method Overriding",
+    "Polymorphism",
+    "Class Definition"
+  ]
+}

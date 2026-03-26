@@ -1,0 +1,79 @@
+
+You are planning a Java programming exercise. Output ONLY valid JSON matching this schema, no markdown, no explanation.
+
+## Dependency Constraints (MANDATORY)
+
+The exercise MUST:
+- Cover all prerequisite competencies required for the target competencies
+- Not omit any required prerequisite
+- Ensure that all dependencies are satisfied before advanced concepts are used
+- Each prerequisite MUST be explicitly demonstrated in the code structure or behavior
+
+The exercise MUST NOT:
+- Use any concept that is not included in the described competencies or their prerequisites
+- Introduce advanced concepts without their prerequisites being covered
+
+## Validation Requirement
+
+You MUST explicitly list:
+- All competencies covered in the exercise
+- All prerequisite competencies that are required and covered
+
+## Exercise Type: Standard Exercise (standard)
+
+Targets:
+- Classes: 6-8
+- Student TODOs: 4-5
+- Test methods: 8-20
+- Solution LOC range: 50-120
+
+## Exercise Context
+
+- **Title**: File Processing System
+- **Package**: de.tum.test
+
+### Competency and Prerequisites Description
+
+
+The exercise should focus on the following competencies:
+
+Try-Catch Blocks
+Apply try-catch-finally blocks to handle exceptions gracefully and maintain program stability. Use appropriate exception handling strategies including catching specific exceptions, resource cleanup, and meaningful error recovery or reporting.
+    
+Exceptions: 
+Explain Java's exception mechanism including the distinction between checked and unchecked exceptions. Understand how exceptions represent error conditions, propagate through the call stack, and differ from normal return values.
+
+
+
+
+## Required JSON Schema
+
+{
+  "exerciseTheme": "string — a brief thematic description",
+  "classes": [
+    {
+      "name": "string — class name",
+      "type": "class | interface | enum | abstract class | record",
+      "file": "string — relative file path",
+      "package": "string — Java package",
+      "methods": ["string — method signatures"],
+      "implements": ["string — interface names (optional)"],
+      "extends": "string — parent class (optional)",
+      "providedToStudent": "boolean"
+    }
+  ],
+  "designPatterns": ["string"],
+  "studentTodos": "number",
+  "estimatedSolutionLOC": "number",
+  "testClasses": [
+    {
+      "name": "string",
+      "file": "string",
+      "testMethods": ["string"]
+    }
+  ],
+  "coveredCompetencies": ["string"],
+  "coveredPrerequisites": ["string"]
+}
+
+Output ONLY the JSON object. No markdown fences, no commentary.

@@ -1,0 +1,117 @@
+
+You are planning a Java programming exercise. Output ONLY valid JSON matching this schema, no markdown, no explanation.
+
+## Dependency Constraints (MANDATORY)
+
+The exercise MUST:
+- Cover all prerequisite competencies required for the target competencies
+- Not omit any required prerequisite
+- Ensure that all dependencies are satisfied before advanced concepts are used
+The exercise MUST NOT:
+- Use any concept that is not included in the listed competencies or their prerequisites
+- Introduce advanced concepts without their prerequisites being covered
+
+## Validation Requirement
+
+You MUST explicitly list:
+- All competencies covered in the exercise
+- All prerequisite competencies that are required and covered
+
+## Exercise Type: Standard Exercise (standard)
+
+Targets:
+- Classes: 2-6
+- Student TODOs: 4-5
+- Test methods: 8-20
+- Solution LOC range: 50-120
+
+## Exercise Context
+
+- **Title**: Zoo Animal Behavior System
+- **Package**: de.tum.test
+
+### Competencies
+
+- Dynamic Binding
+  Taxonomy: Analyze
+  Description: Analyze how method calls are resolved at runtime based on the actual object type rather than the declared variable type. Trace polymorphic method invocations through class hierarchies to predict program behavior.
+
+- Inheritance
+  Taxonomy: Apply
+  Description: Apply inheritance to create subclass relationships using the 'extends' keyword, reusing and extending superclass functionality. Use inheritance to model is-a relationships and establish class hierarchies that reduce code duplication.
+
+
+
+### Prerequisites
+
+- Inheritance
+  Taxonomy: Apply
+  Description: Apply inheritance to create subclass relationships using the 'extends' keyword, reusing and extending superclass functionality. Use inheritance to model is-a relationships and establish class hierarchies that reduce code duplication.
+
+- Class Definition
+  Taxonomy: Create
+  Description: Design and create complete class definitions that model real-world entities or abstract concepts. Produce well-structured classes with appropriate fields, methods, and constructors that exhibit high cohesion and clear responsibility.
+
+- Objects and Classes
+  Taxonomy: Understand
+  Description: Explain the relationship between classes and objects, describing how a class serves as a blueprint that defines state (fields) and behavior (methods), while objects are individual instances created from that blueprint.
+
+- Method Overriding
+  Taxonomy: Apply
+  Description: Apply method overriding to provide specialized implementations of inherited methods in subclasses. Use the @Override annotation, call superclass methods appropriately, and maintain the method contract while customizing behavior.
+
+- Polymorphism
+  Taxonomy: Understand
+  Description: Explain how polymorphism allows objects of different classes to be treated uniformly through a common supertype. Understand how polymorphism enables flexible, extensible code where new types can be added without modifying existing code.
+
+- Static vs Dynamic Types
+  Taxonomy: Understand
+  Description: Explain the distinction between a variable's declared (static) type and the actual runtime (dynamic) type of the object it references. Understand how Java's type system uses compile-time type checking while supporting runtime polymorphism.
+
+
+
+### Competency Dependencies
+
+Dynamic Binding [extends] Polymorphism
+Dynamic Binding [requires] Inheritance
+Dynamic Binding [requires] Method Overriding
+Inheritance [extends] Class Definition
+Inheritance [extends] Objects and Classes
+Class Definition [extends] Objects and Classes
+Method Overriding [requires] Inheritance
+Polymorphism [requires] Inheritance
+Polymorphism [requires] Static vs Dynamic Types
+
+
+
+## Required JSON Schema
+
+{
+  "exerciseTheme": "string — a brief thematic description",
+  "classes": [
+    {
+      "name": "string — class name",
+      "type": "class | interface | enum | abstract class | record",
+      "file": "string — relative file path",
+      "package": "string — Java package",
+      "methods": ["string — method signatures"],
+      "implements": ["string — interface names (optional)"],
+      "extends": "string — parent class (optional)",
+      "providedToStudent": "boolean"
+    }
+  ],
+  "designPatterns": ["string"],
+  "studentTodos": "number — choose a value within target range",
+  "estimatedSolutionLOC": "number",
+  "testClasses": [
+    {
+      "name": "string",
+      "file": "string",
+      "testMethods": ["string"]
+    }
+  ],
+  "coveredCompetencies": ["string"],
+  "coveredPrerequisites": ["string"]
+}
+
+Output ONLY the JSON object. No markdown fences, no commentary.

@@ -1,0 +1,8 @@
+{
+  "files": [
+    {
+      "path": "problem-statement.md",
+      "content": "# User Management System\n\n## Problem Statement\n\nDesign and implement a User Management System that allows handling user data, ensuring the proper management of usernames and email addresses. The system should support the following functionalities:\n\n1. Creating users with a unique username and email.\n2. Finding users by their username.\n3. Updating a user's email.\n4. Deleting a user by their username.\n5. Validating usernames and email addresses to ensure they conform to specified formats.\n6. Addressing potential null reference issues by incorporating necessary checks to prevent NullPointerExceptions during operations.\n\nYou will build the system using the following classes:\n- `User`: This will represent a single user with a username and email.\n- `UserService`: This will handle user creation, searching, updating, and deletion operations.\n- `UserManagementSystem`: This will provide an interface for the user interactions.\n- `UserNotFoundException`: This will be a custom exception to handle cases where a user cannot be found.\n- `UserValidation`: This will validate usernames and email addresses.\n\n## Implementation Details\nEach class should be created in its own Java file, and methods should be implemented according to the specified functionalities. Ensure to handle null values appropriately to avoid runtime exceptions.\n\n## Competencies Covered\n- Null References\n- Object References\n- Object Equality\n\n## Prerequisites\n- Object References\n- Object Creation\n- Objects and Classes\n"
+    }
+  ]
+}

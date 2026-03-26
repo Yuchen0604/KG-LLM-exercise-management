@@ -1,0 +1,56 @@
+{
+  "files": [
+    {
+      "path": "problem-statement.md",
+      "content": "# Zoo Animal Behavior System\n\n## Problem Statement\n\nYou are tasked with implementing a Zoo Animal Behavior System that demonstrates the principles of inheritance and polymorphism in Java. The system should model various animals in a zoo, focusing on their behaviors through method implementations.\n\n### Requirements\n\n1. **Animal**: Base class for all animals. Implements basic behaviors like making sounds and eating.\n   - Methods:\n     - `void makeSound()` - Each animal should implement its own sound.\n     - `void eat()` - Each animal should have an eating mechanism.\n\n2. **Mammal**: Inherits from `Animal` and adds nursing behavior.\n   - Methods:\n     - `void nurse()` - Mammals should have the capability to nurse their young.\n\n3. **Bird**: Inherits from `Animal` and adds flying behavior.\n   - Methods:\n     - `void fly()` - Birds should have the capacity to fly.\n\n4. **Dog**: Inherits from `Mammal` and implements specific dog behaviors.\n   - Methods:\n     - `void makeSound()` - Dogs bark.\n     - `void fetch()` - Dogs can fetch items.\n\n5. **Cat**: Inherits from `Mammal` and implements specific cat behaviors.\n   - Methods:\n     - `void makeSound()` - Cats meow.\n\n6. **Parrot**: Inherits from `Bird` and implements specific parrot behaviors.\n   - Methods:\n     - `void makeSound()` - Parrots mimic sounds.\n\n### Competencies Covered\n- **Dynamic Binding**: Analyze how method calls are resolved at runtime based on the actual object type.\n- **Inheritance**: Apply inheritance to model is-a relationships and reduce code duplication.\n\n### Prerequisites\n- Understanding of Inheritance\n- Class Definitions and Objects\n- Method Overriding\n- Polymorphism\n- Static vs Dynamic Types\n\n## Instructions\nImplement the classes as specified, and ensure that you apply inheritance and method overriding principles correctly. Write unit tests for each class to validate their behaviors."
+    },
+    {
+      "path": "Animal.java",
+      "content": "package de.tum.test;\n\npublic class Animal {\n    public void makeSound() {\n        // Implementation needed\n    }\n\n    public void eat() {\n        // Implementation needed\n    }\n}"
+    },
+    {
+      "path": "Mammal.java",
+      "content": "package de.tum.test;\n\npublic class Mammal extends Animal {\n    public void nurse() {\n        // Implementation needed\n    }\n}"
+    },
+    {
+      "path": "Bird.java",
+      "content": "package de.tum.test;\n\npublic class Bird extends Animal {\n    public void fly() {\n        // Implementation needed\n    }\n}"
+    },
+    {
+      "path": "Dog.java",
+      "content": "package de.tum.test;\n\npublic class Dog extends Mammal {\n    @Override\n    public void makeSound() {\n        // Dog barks\n    }\n\n    public void fetch() {\n        // Implementation needed\n    }\n}"
+    },
+    {
+      "path": "Cat.java",
+      "content": "package de.tum.test;\n\npublic class Cat extends Mammal {\n    @Override\n    public void makeSound() {\n        // Cat meows\n    }\n}"
+    },
+    {
+      "path": "Parrot.java",
+      "content": "package de.tum.test;\n\npublic class Parrot extends Bird {\n    @Override\n    public void makeSound() {\n        // Parrot mimics sound\n    }\n}"
+    },
+    {
+      "path": "AnimalTest.java",
+      "content": "package de.tum.test;\nimport org.junit.Test;\nimport static org.junit.Assert.*;\n\npublic class AnimalTest {\n    @Test\n    public void testMakeSound() {\n        Animal animal = new Animal();\n        animal.makeSound(); // Add assertions to verify behavior\n    }\n\n    @Test\n    public void testEat() {\n        Animal animal = new Animal();\n        animal.eat(); // Add assertions to verify behavior\n    }\n}"
+    },
+    {
+      "path": "MammalTest.java",
+      "content": "package de.tum.test;\nimport org.junit.Test;\nimport static org.junit.Assert.*;\n\npublic class MammalTest {\n    @Test\n    public void testMakeSound() {\n        Mammal mammal = new Mammal();\n        mammal.makeSound(); // Add assertions to verify behavior\n    }\n\n    @Test\n    public void testNurse() {\n        Mammal mammal = new Mammal();\n        mammal.nurse(); // Add assertions to verify behavior\n    }\n}"
+    },
+    {
+      "path": "BirdTest.java",
+      "content": "package de.tum.test;\nimport org.junit.Test;\nimport static org.junit.Assert.*;\n\npublic class BirdTest {\n    @Test\n    public void testFly() {\n        Bird bird = new Bird();\n        bird.fly(); // Add assertions to verify behavior\n    }\n\n    @Test\n    public void testMakeSound() {\n        Bird bird = new Bird();\n        bird.makeSound(); // Add assertions to verify behavior\n    }\n}"
+    },
+    {
+      "path": "DogTest.java",
+      "content": "package de.tum.test;\nimport org.junit.Test;\nimport static org.junit.Assert.*;\n\npublic class DogTest {\n    @Test\n    public void testMakeSound() {\n        Dog dog = new Dog();\n        dog.makeSound(); // Add assertions to verify behavior\n    }\n\n    @Test\n    public void testFetch() {\n        Dog dog = new Dog();\n        dog.fetch(); // Add assertions to verify behavior\n    }\n}"
+    },
+    {
+      "path": "CatTest.java",
+      "content": "package de.tum.test;\nimport org.junit.Test;\nimport static org.junit.Assert.*;\n\npublic class CatTest {\n    @Test\n    public void testMakeSound() {\n        Cat cat = new Cat();\n        cat.makeSound(); // Add assertions to verify behavior\n    }\n}"
+    },
+    {
+      "path": "ParrotTest.java",
+      "content": "package de.tum.test;\nimport org.junit.Test;\nimport static org.junit.Assert.*;\n\npublic class ParrotTest {\n    @Test\n    public void testMakeSound() {\n        Parrot parrot = new Parrot();\n        parrot.makeSound(); // Add assertions to verify behavior\n    }\n}"
+    }
+  ]
+}
